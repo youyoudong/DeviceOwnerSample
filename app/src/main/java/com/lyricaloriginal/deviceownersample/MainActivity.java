@@ -132,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setButtonEnable(mDpm.isDeviceOwnerApp(getPackageName()));
+        // adb shell dpm set-device-owner com.lyricaloriginal.deviceownersample/com.lyricaloriginal.deviceownersample.MyDeviceAdminReceiverを実行する場合、
+        // 上記mDpm.isDeviceOwnerApp(getPackageName())から返却した値がtrue
     }
 
     @Override
